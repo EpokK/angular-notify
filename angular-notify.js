@@ -70,12 +70,12 @@ angular.module('cgNotify', []).factory('notify',['$timeout','$http','$compile','
                     });
                 }
 
-                scope.$close = function(){
+                scope.$close = function(e){
                     templateElement.css('opacity',0).attr('data-closing','true');
                     layoutMessages();
 
                     if (angular.isDefined(args.onClose)) {
-                        args.onClose(scope.$message);
+                        args.onClose(e || {}, scope.$message);
                     }
                 };
 
