@@ -100,28 +100,6 @@ angular.module('cgNotify', []).factory('notify',['$timeout','$http','$compile','
                     }
                 };
 
-                // function layoutMessages() {
-                //     var j = 0;
-                //     var currentY = startTop;
-                //     for(var i = messageElements.length - 1; i >= 0; i --){
-                //         var shadowHeight = 10;
-                //         var element = messageElements[i];
-                //         var height = element[0].offsetHeight;
-                //         var top = currentY + height + shadowHeight;
-                //         if (element.attr('data-closing')){
-                //             top += 20;
-                //         } else {
-                //             currentY += height + verticalSpacing;
-                //         }
-                //         element.css('top',top + 'px').css('margin-top','-' + (height+shadowHeight) + 'px').css('visibility','visible');
-                //         j ++;
-                //     }
-                // }
-
-                // scope.$applyAsync(function(){
-                //     layoutMessages();
-                // });
-
                 if (args.duration > 0){
                     $timeout(function(){
                         scope.$close();
